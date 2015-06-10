@@ -22,13 +22,13 @@ void Widget::on_createMission_clicked()
 	QString MPMissionDir = ui->missionName->text();
 	MPMissionDir.append("." + ui->terrain->currentText());
 
-    // remove all the garbage characters
+	// remove all the garbage characters
 	//MPMissionDir.replace(QRegExp("[()@!\\/]"), "_");
 
-    // replace spaces with underscore
+	// replace spaces with underscore
 	MPMissionDir.replace(" ", "_");
 
-    // lower case for linux dedicated server enjoyment
+	// lower case for linux dedicated server enjoyment
 	MPMissionDir = MPMissionDir.toLower();
 
 	// create the directory
@@ -88,8 +88,8 @@ void Widget::on_createMission_clicked()
 	}
 
 	QString str1 = "/*\n\n\t" + ui->missionName->text() + "\n\n*/\n\n";
-    str1.append("respawn = \"" + ui->respawn->currentText() + "\";\nrespawndelay = " + ui->respawnDelay->text() + ";\nonLoadMission = \"" + ui->onLoadMission->text() + "\";\n");
-    str1.append("OnLoadIntro = \"" + ui->onLoadIntro->text() + "\";\nOnLoadIntroTime = " + onLoadIntroTime + ";\nOnLoadMissionTime = " + onLoadMissionTime + ";\n");
+	str1.append("respawn = \"" + ui->respawn->currentText() + "\";\nrespawndelay = " + ui->respawnDelay->text() + ";\nonLoadMission = \"" + ui->onLoadMission->text() + "\";\n");
+	str1.append("OnLoadIntro = \"" + ui->onLoadIntro->text() + "\";\nOnLoadIntroTime = " + onLoadIntroTime + ";\nOnLoadMissionTime = " + onLoadMissionTime + ";\n");
 	str1.append("disabledAI = " + disabledAI + ";\nShowGPS = " + showGPS + ";\n\n");
 
 	// settings class header thing
